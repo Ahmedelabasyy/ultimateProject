@@ -1,0 +1,91 @@
+.page{
+    .sidebar{
+        width: 250px;
+        transition: .3s;
+        padding: 15px;
+        background-color:#272E3A;
+        color:#FFF;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        &.no-sidebar{
+            left: -250px;
+        }
+        .logo-area{
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .links-area{ 
+            // All Links
+            li{
+                a{
+                    color:#DDD;
+                    padding: 10px 20px;
+                    display: block;
+                    transition: .3s;
+                    &:hover{
+                        text-decoration: none;
+                        color:#FFF;
+                    }
+                }
+            }
+            > li > a{
+                // Main Links
+                position: relative;
+                padding-left: 20px;
+                color:#FFF;
+                &:before{
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    border: 2px solid #F5F7F9;
+                    transform: translatey(-50%);
+                }
+                &:hover{
+                    padding-left: 26px;
+                }
+                .fa-angle-right{
+                    position: relative;
+                    top: 7px;
+                    float: right;
+                    transition: .3s;
+                    &.down{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            .childs-list{
+                position: relative;
+                display: none;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    background-color:#009688;
+                    top: 0;
+                    left: 3px;
+                }
+                a{
+                    position: relative;
+                    &:hover:before{
+                        content: '';
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        background-color: #FFF;
+                        left: 3px;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

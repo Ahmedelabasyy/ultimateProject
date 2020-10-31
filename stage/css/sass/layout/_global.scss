@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.page{
+    min-height: 100vh;
+    .content-area{
+        width: calc(100% - 250px);
+        transition: .3s;
+        min-height: 100vh;
+        will-change: width;
+        float: right;
+        background-color: #F5F7F9;
+        &.no-sidebar{
+            width: 100%;
+        }
+    }
+}
