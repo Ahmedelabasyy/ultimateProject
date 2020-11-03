@@ -1,2 +1,20 @@
 .header
     i.fa.fa-exchange-alt.fa-lg.toggle
+    .dropdown.notify
+        i.fas.fa-bell.fa-lg.belly#notify(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        .dropdown-menu.droppy(aria-labelledby='notify')
+            .noti-head
+                | Notifications 
+                span 50
+            .noti-content
+                ul.list-unstyled
+                    li 
+                        i.fas.fa-user-graduate.one
+                        | Yo Got A New Freind Request
+                    li 
+                        i.fas.fa-heart.two
+                        | New Like For You
+                    li 
+                        i.fas.fa-comment.three
+                        | Yo Have A New Comment 
+            .noti-footer.text-center: a(href="") View All Notifications
