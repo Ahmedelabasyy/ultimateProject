@@ -1,7 +1,80 @@
 .header{
     background-color: #FFF;
+    padding: 20px;
     .toggle{
         cursor: pointer;
-        padding-left: 15px;
+    }
+    .notify{
+        display: inline-block;
+        padding-left: 10px;
+        .belly{
+            padding: 8px;
+            cursor: pointer;
+            background-color: $greenColor;
+            border-radius: 25%;
+            font-size: 17px;
+            color: #FFF;
+        }
+        .droppy{
+            border: none;
+            min-width: 300px;
+            &:before{
+                content: '';
+                position: absolute;
+                top: -11px;
+                left: 5px;
+                border-style: solid;
+                border-width: 10px;
+                border-color: transparent transparent $greenColor transparent;
+            }
+            .noti-head{
+                padding: 15px;
+                background-color: $greenColor;
+                color: #FFF;
+                span{
+                    float:right;
+                }
+            }
+            .noti-content{
+                ul{
+                    margin: 0;
+                    li{
+                        padding: 15px;
+                        font-weight: bold;
+                        cursor:pointer;
+                        i{
+                            padding: 8px;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 17%;
+                            line-height: 14px;
+                            color: #FFF;
+                            margin-right: 10px;
+                            font-size: 17px;
+                            text-align: left;
+                            &.one{
+                                background-color: #ff5722;
+                            }
+                            &.two{
+                                background-color: #e91e63;
+                            }
+                            &.three{
+                                background-color: #4caf50;
+                            }
+                        }
+                    }
+                }
+            }
+            .noti-footer{
+                border-top: 1px solid #f2f2f2;
+                padding: 8px;
+                a{
+                    color: $greenColor;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }
