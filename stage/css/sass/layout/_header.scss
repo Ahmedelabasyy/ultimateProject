@@ -1,20 +1,21 @@
 .header{
     background-color: #FFF;
     padding: 20px;
+    .header-icons{
+        padding: 8px;
+        cursor: pointer;
+        background-color: $greenColor;
+        border-radius: 25%;
+        font-size: 17px;
+        color: #FFF;
+        margin-left: 10px;
+    }
     .toggle{
         cursor: pointer;
     }
     .notify{
         display: inline-block;
         padding-left: 10px;
-        .belly{
-            padding: 8px;
-            cursor: pointer;
-            background-color: $greenColor;
-            border-radius: 25%;
-            font-size: 17px;
-            color: #FFF;
-        }
         .droppy{
             border: none;
             min-width: 300px;
