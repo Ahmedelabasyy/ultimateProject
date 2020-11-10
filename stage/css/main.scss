@@ -1,4 +1,8 @@
+@import 'sass/options/colors';
+
 @import 'sass/layout/global';
 @import 'sass/variables/myvariables';
 @import 'sass/layout/sidebar';
 @import 'sass/layout/header';
+
+@import 'sass/components/settings-bar.scss'
