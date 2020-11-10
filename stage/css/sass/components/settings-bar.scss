@@ -1,0 +1,22 @@
+.settings-bar{
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    background-color: #FFF;
+    padding: 20px;
+    transition: .4s;
+    &.hide-settings{
+        right: -250px;
+    }
+    .toggle-settings{
+        position: absolute;
+        left: -42px;
+        top: 100px;
+        background-color: #FFF;
+        padding: 8px 11px;
+        cursor: pointer;
+    }
+}

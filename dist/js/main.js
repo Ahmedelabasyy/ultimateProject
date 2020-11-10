@@ -18,6 +18,12 @@ $(function () {
             exitFullScreen();
         }
     })
+
+    // Toggle Setting Bar
+    $('.toggle-settings').on('click', function () {
+        $(this).find('i').toggleClass('fa-spin');
+        $(this).parent().toggleClass('hide-settings');
+    });
 });
 
     /* View in fullscreen */
