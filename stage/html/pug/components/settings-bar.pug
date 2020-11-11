@@ -1,10 +1,14 @@
 .settings-bar.hide-settings
     .toggle-settings
         i.fas.fa-cog.fa-lg
-    .settings-content
+    .settings-content.text-center
+        .option-box.colors-option
+            h4.option-title Colors Option
+            - var themes = ["green-theme","blue-theme","red-theme","orange-theme","purple-theme"]
+            ul.list-unstyled
+                each theme in themes
+                    li(data-theme=theme)
         .option-box
-            h4 Colors Option
+            h4.option-title Fonts Option
         .option-box
-            h4 Fonts Option
-        .option-box
-            h4 Sidebar Option
+            h4.option-title Sidebar Option
