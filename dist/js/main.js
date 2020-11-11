@@ -24,6 +24,16 @@ $(function () {
         $(this).find('i').toggleClass('fa-spin');
         $(this).parent().toggleClass('hide-settings');
     });
+
+    // Switch Color Theme
+    var themes = [];
+    $(".colors-option li").each(function () {
+        themes.push($(this).data("theme"));
+    });
+    $(".colors-option li").on('click', function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        $("body").removeClass(themes.join(" ")).addClass($(this).data("theme"));
+    });
 });
 
     /* View in fullscreen */
