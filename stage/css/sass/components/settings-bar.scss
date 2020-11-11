@@ -8,14 +8,6 @@
     background-color: #FFF;
     padding: 20px;
     transition: .4s;
-    .option-title{
-        font-size: 24px;
-        color:#666;
-        margin: 10px 0 15px;
-    }
-    &.hide-settings{
-        right: -250px;
-    }
     .toggle-settings{
         position: absolute;
         left: -42px;
@@ -24,24 +16,36 @@
         padding: 8px 11px;
         cursor: pointer;
     }
-    .colors-option{
-        ul{
-            $colors : #009688, #0984e3, #d63031, #ff9f43, #D980FA;
-            @for $i from 1 through length($colors){
-                li:nth-child(#{$i}){
-                    background-color: nth($colors, $i);
+    &.hide-settings{
+        right: -250px;
+    }
+    .option-box{
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        .option-title{
+            font-size: 24px;
+            color:#666;
+            margin: 10px 0 15px;
+        }
+        &.colors-option{
+            ul{
+                $colors : #009688, #0984e3, #d63031, #ff9f43, #D980FA;
+                @for $i from 1 through length($colors){
+                    li:nth-child(#{$i}){
+                        background-color: nth($colors, $i);
+                    }
                 }
-            }
-            li{
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                display:inline-block;
-                cursor: pointer;
-                opacity: .5;
-                margin-right: .5px;
-                &.active{
-                    opacity: 1;
+                li{
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    display:inline-block;
+                    cursor: pointer;
+                    opacity: .5;
+                    margin-right: .5px;
+                    &.active{
+                        opacity: 1;
+                    }
                 }
             }
         }

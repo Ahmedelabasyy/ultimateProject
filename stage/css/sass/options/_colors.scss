@@ -8,8 +8,33 @@ $themes: (
 
 @each $theme,$map  in $themes {
     .#{$theme} {
+        $color: map-get($map, color);
         .page .page-head .page-title{
-            color: map-get($map, color);
+            color: $color;
+        }
+        .page .sidebar .links-area .childs-list:before{
+            background-color: $color;
+        }
+        .header .header-icons{
+            background-color: $color;
+        }
+        .header .notify .droppy .noti-head{
+            background-color: $color;
+        }
+        .header .notify .droppy:before{
+            border-color: transparent transparent $color transparent !important;
+        }
+        .header .notify .droppy .noti-footer a{
+            color: $color;
+        }
+        .header .toggle:hover{
+            color: $color;
+        }
+        .header .user-container .droppy .user-info h3{
+            color: $color;
+        }
+        .header .user-container .droppy .activities-list li i{
+            color: $color;
         }
     }
 }
